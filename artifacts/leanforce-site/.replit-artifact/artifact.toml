@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "LeanForce"
+description = "A responsive LeanForce landing page showing how small and midsize businesses can improve repetitive workflows with practical AI, connected software, and clear human approval."
+version = "1.0.0"
+id = "artifacts/leanforce-site"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18394
+
+[services.development]
+run = "pnpm --filter @workspace/leanforce-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/leanforce-site", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/leanforce-site/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18394"
+BASE_PATH = "/"
