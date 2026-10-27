@@ -53,3 +53,6 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Local inquiry log from the preview form
+artifacts/leanforce-site/data/
