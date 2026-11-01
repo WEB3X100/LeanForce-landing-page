@@ -16,15 +16,6 @@ type TeamProfile = {
 
 const team: TeamProfile[] = [
   {
-    name: 'Mohammad Umair Khalid',
-    initials: 'MUK',
-    role: 'Finance Systems & AI',
-    headline: 'Make complex finance work easier to run.',
-    bio: 'Umair is a consultant at Echo Park Consulting focused on ERP implementation and AI for finance operations. He brings experience with finance systems and helping teams work through complex implementations.',
-    href: 'https://www.linkedin.com/in/umaairkhalid/',
-    accent: 'cyan',
-  },
-  {
     name: 'Irfan Bhimani',
     initials: 'IB',
     role: 'Enterprise Transformation & Delivery',
@@ -109,7 +100,7 @@ export default function AboutPage() {
       <section className="about-team section-pad" aria-label="The LeanForce team">
         <div className="about-team__heading">
           <span>THE PEOPLE BEHIND THE WORK</span>
-          <span>01 — 03</span>
+          <span>01 — 02</span>
         </div>
         <div className="about-team__grid">
           {team.map((profile) => <TeamCard key={profile.initials} profile={profile} />)}
