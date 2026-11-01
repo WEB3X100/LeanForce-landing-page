@@ -8,6 +8,7 @@ import { OpeningSequence } from './components/OpeningSequence';
 import { CursorGrid } from './components/CursorGrid';
 import { SiteFrame } from './components/SiteFrame';
 import EngagementsPage from './pages/EngagementsPage';
+import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { validateInquiry } from './lib/inquiry';
@@ -419,6 +420,7 @@ export default function App() {
     <Switch>
       <Route path="/" component={HomePage} />
       <Route path="/engagements" component={EngagementsPage} />
+      <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />
       <Route component={NotFoundPage} />
     </Switch>

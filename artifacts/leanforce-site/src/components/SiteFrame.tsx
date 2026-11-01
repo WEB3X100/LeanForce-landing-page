@@ -11,6 +11,10 @@ const pages: Record<string, { title: string; description: string }> = {
     title: 'Focused Workflow | LeanForce',
     description: 'Start with one workflow. Assessment and Map, Sprint Build, and Managed Run are scoped separately. The fee is confirmed after assessment.',
   },
+  '/about': {
+    title: 'About LeanForce | Meet the people behind the workflow',
+    description: 'Meet the LeanForce team and learn how practical systems and AI-assisted automation can improve everyday workflows.',
+  },
   '/privacy': {
     title: 'Privacy | LeanForce',
     description: 'How LeanForce uses the name, company, workflow, and contact details you send with an inquiry.',
@@ -85,6 +89,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
           <a href={section('workflows')} onClick={close}>Workflows</a>
           <a href={section('how-it-works')} onClick={close}>How it works</a>
           <a href="/engagements" onClick={close} aria-current={location === '/engagements' ? 'page' : undefined}>Engagements</a>
+          <a href="/about" onClick={close} aria-current={location === '/about' ? 'page' : undefined} data-testid="link-about-nav">About</a>
           <a href={section('faq')} onClick={close}>FAQ</a>
           <a className="nav-cta" href={section('contact')} onClick={close}>Talk through a workflow <ArrowUpRight size={15} /></a>
         </nav>
@@ -97,6 +102,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
             <a href={section('workflows')}>Workflows</a>
             <a href={section('how-it-works')}>How it works</a>
             <a href="/engagements">Engagements</a>
+            <a href="/about" aria-current={location === '/about' ? 'page' : undefined}>About</a>
             <a href={section('faq')}>FAQ</a>
             <a href="/privacy" aria-current={location === '/privacy' ? 'page' : undefined}>Privacy</a>
           </nav>
